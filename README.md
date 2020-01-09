@@ -11,6 +11,9 @@ em disciplinas; poderão modificá-las, e redistribuí-las.
 
 Assim, todo aluno, ou grupo, é convidado a contribuir com o repositório. 
 
+Acesse o nosso [Wiki](https://github.com/26-55-87-BuddhiLW/EEL-USP/wiki/Reposit%C3%B3rio-de-Materiais-EEL-USP), lá há mais detalhes sobre o repositório.
+
+
 
   Que ele seja de benefício a todos,
             Branquinho.
