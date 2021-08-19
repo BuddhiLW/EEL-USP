@@ -9,15 +9,15 @@ We will use =Julia= and =Plots=.
   u(x) = sin(2π*x) 
 #+end_src
 
-#+RESULTS:
-: u
+*RESULTS:*
+ u
 
 #+begin_src julia :session main :result output
   u(-π/4.15999)
 #+end_src
 
-#+RESULTS:
-: 0.999467866836951
+*RESULTS:*
+ 0.999467866836951
 
 #+begin_src julia :session main :result output
 using Plots
@@ -30,8 +30,8 @@ using Plots
   savefig("figs/curve.png")
 #+end_src
 
-#+RESULTS:
-#+ATTR_HTML: :width 200px
+*RESULTS*
+#+ATTR_HTML: :width 400px
 [[file:figs/curve.png]]
 
 #+BEGIN_SRC julia :results file graphics :file curve2.png :output-dir figs :session main
@@ -39,8 +39,8 @@ using Plots
   savefig("figs/curve2.png")
 #+end_src
 
-#+RESULTS:
-#+ATTR_HTML: :width 200px
+*RESULTS*
+#+ATTR_HTML: :width 400px
 [[file:figs/curve2.png]]
 
 #+BEGIN_SRC julia :results file graphics :file curve3.png :output-dir figs :session main
@@ -48,8 +48,14 @@ using Plots
   savefig("figs/curve3.png")
 #+end_src
 
-#+RESULTS:
-#+ATTR_HTML: :with 300px
+*RESULTS*
+#+ATTR_HTML: :width 400px
+
 [[file:figs/curve3.png]]
 
 
+* Notes on coding
+- =u.(x)= significa, para cada correspondente =x=, chame =u(x)=.
+- =scatter(x,y)= crear pontos no gráfico com coordenadas =(x,y)=.
+- =plot(x,y)= ligar, ponto a ponto, os valores dos vetores =x, y=.
+- =plot!(x,y)= o signo =!= significa sobrepor, ou sobreescrever (jargão ciência da computação: mutar).

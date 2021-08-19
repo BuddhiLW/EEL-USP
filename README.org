@@ -1,4 +1,17 @@
 * Repositório de Notas e Computações
+** Notas gerais
+Sob cada arquivo, caso o autor julge pertinente, haverão notas de
+rodapé explicando detalhes da sintaxe ou do funcionamento do programa.
+
+*** Exemplo
+#+begin_src org
+,* Notes on coding
+,- =u.(x)= significa, para cada correspondente =x=, chame =u(x)=.
+,- =scatter(x,y)= crear pontos no gráfico com coordenadas =(x,y)=.
+,- =plot(x,y)= ligar, ponto a ponto, os valores dos vetores =x, y=.
+,- =plot!(x,y)= o signo =!= significa sobrepor, ou sobreescrever (jargão ciência da computação: mutar).
+#+end_src
+
 ** Lista de computações
 *** Simulação de Discretização de Funções (f: ℝ → ℝ)
 - [[file:Discretize.org][ Partition or Discretize f(x)=sin(2π.x)]]
