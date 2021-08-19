@@ -1,0 +1,55 @@
+#+STARTUP: showall
+
+* Package and language
+We will use =Julia= and =Plots=.
+** Partition or Discretize $sin(2\pi{.}x)$
+#+begin_src julia :session main :result output
+  Δx = 0.1
+  x = 0:Δx:1
+  u(x) = sin(2π*x) 
+#+end_src
+
+#+RESULTS:
+: u
+
+#+begin_src julia :session main :result output
+  u(-π/4.15999)
+#+end_src
+
+#+RESULTS:
+: 0.999467866836951
+
+#+begin_src julia :session main :result output
+using Plots
+#+end_src
+
+#+RESULTS:
+
+#+BEGIN_SRC julia :results file graphics :file curve.png :output-dir figs :session main
+  plot(u,0,1,lw=3)
+  savefig("figs/curve.png")
+#+end_src
+
+#+RESULTS:
+#+ATTR_HTML: :width 200px
+[[file:figs/curve.png]]
+
+#+BEGIN_SRC julia :results file graphics :file curve2.png :output-dir figs :session main
+  scatter!(x,u.(x))
+  savefig("figs/curve2.png")
+#+end_src
+
+#+RESULTS:
+#+ATTR_HTML: :width 200px
+[[file:figs/curve2.png]]
+
+#+BEGIN_SRC julia :results file graphics :file curve3.png :output-dir figs :session main
+  plot!(x,u.(x),lw=3)
+  savefig("figs/curve3.png")
+#+end_src
+
+#+RESULTS:
+#+ATTR_HTML: :with 300px
+[[file:figs/curve3.png]]
+
+

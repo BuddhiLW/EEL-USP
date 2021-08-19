@@ -1,0 +1,7 @@
+* Repositório de Notas e Computações
+** Lista de computações
+*** Simulação de Discretização de Funções ($f:\mathbb{R} \,\to\,\mathbb{R}$).
+
+#+ATTR_HTML: :witdh 300px
+[[file:figs/curve3.png]]
+
