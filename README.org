@@ -1,7 +1,8 @@
 * Repositório de Notas e Computações
 ** Lista de computações
-*** Simulação de Discretização de Funções ($f:\mathbb{R} \,\to\,\mathbb{R}$).
-
+*** Simulação de Discretização de Funções (f: ℝ → ℝ)
+- [[file:Discretize.org::*Partition or Discretize $sin(2\pi{.}x)$][ Partition or Discretize f(x)=sin(2π.x)]]
+   
 #+ATTR_HTML: :witdh 300px
 [[file:figs/curve3.png]]
 * Sobre o repositório
@@ -22,5 +23,6 @@ Que ele seja de benefício a todos,
 
 Branquinho ॐༀ.
 
+[[http://creativecommons.org/licenses/by-sa/4.0/][https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg]]
 
 
