@@ -1,3 +1,5 @@
+#+STARTUP: showall
+
 * Repositório de Notas e Computações
 ** Notas gerais
 Sob cada arquivo, caso o autor julge pertinente, haverão notas de
@@ -13,11 +15,15 @@ rodapé explicando detalhes da sintaxe ou do funcionamento do programa.
 #+end_src
 
 ** Lista de computações
-*** Simulação de Discretização de Funções (f: ℝ → ℝ)
+*** Simulação de Discretização de Funções (f: ℝ → ℝ) [jl]
 - [[file:Discretize.org][ Partition or Discretize f(x)=sin(2π.x)]]
      
 #+ATTR_HTML: :witdh 300px
 [[file:figs/curve3.png]]
+*** ODE: Massa-Mola [jl]
+   - [[file:ODEs/chapter1/notes.org::*Solution in Julia][Solution in Julia]] 
+    #+ATTR_HTML: :width 500px
+    [[file:ODEs/chapter1/output_Plots.png][file:./ODEs/chapter1/output_Plots.png]]
 * Sobre o repositório
 ** Repositório de Materiais Acadêmicos, EEL-USP.
 Autor(es)[09/01/2019]: Pedro Gomes Braquinho;
