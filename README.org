@@ -21,7 +21,7 @@ rodapé explicando detalhes da sintaxe ou do funcionamento do programa.
 #+ATTR_HTML: :witdh 300px
 [[file:figs/curve3.png]]
 *** ODE: Massa-Mola [jl]
-   - [[file:ODEs/chapter1/notes.org::*Solution in Julia][Solution in Julia]] 
+   - [[file:ODEs/chapter1/notes.org][Solution in Julia]]
     #+ATTR_HTML: :width 500px
     [[file:ODEs/chapter1/output_Plots.png][file:./ODEs/chapter1/output_Plots.png]]
 * Sobre o repositório
