@@ -1,0 +1,3 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{Pkg}\PYG{o}{.}\PYG{n}{add}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Latexify\PYGZdq{}}\PYG{p}{)}
+\end{Verbatim}

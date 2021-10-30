@@ -1,0 +1,7 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{using} \PYG{n}{Pkg}\PYG{p}{;}
+\PYG{n}{Pkg}\PYG{o}{.}\PYG{n}{activate}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}\PYGZti{}/EEL\PYGZhy{}USP/Symbolics/\PYGZdq{}}\PYG{p}{)}
+\PYG{n}{Pkg}\PYG{o}{.}\PYG{n}{add}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Plots\PYGZdq{}}\PYG{p}{)}
+\PYG{n}{Pkg}\PYG{o}{.}\PYG{n}{add}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Symbolics\PYGZdq{}}\PYG{p}{)}
+\PYG{n}{Pkg}\PYG{o}{.}\PYG{n}{add}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}StaticArrays\PYGZdq{}}\PYG{p}{)}
+\end{Verbatim}

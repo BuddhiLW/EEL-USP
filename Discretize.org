@@ -1,4 +1,6 @@
 #+STARTUP: showall
+#+startup: latexpreview
+#+startup: imagepreview
 
 * Package and language
 We will use =Julia= and =Plots=.
@@ -52,7 +54,6 @@ using Plots
 #+ATTR_HTML: :width 400px
 
 [[file:figs/curve3.png]]
-
 
 * Notes on coding
 - =u.(x)= significa, para cada correspondente =x=, chame =u(x)=.

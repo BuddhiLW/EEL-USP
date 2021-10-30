@@ -1,0 +1,5 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{using} \PYG{n}{Symbolics}
+\PYG{k}{using} \PYG{n}{Plots}
+\PYG{k}{using} \PYG{n}{StaticArrays}
+\end{Verbatim}

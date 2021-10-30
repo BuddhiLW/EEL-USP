@@ -1,0 +1,8 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{function} \PYG{n}{derivative}\PYG{p}{(}\PYG{n}{exp}\PYG{p}{,} \PYG{n}{ξ}\PYG{p}{)}
+      \PYG{n+nd}{@variables} \PYG{n}{y}
+      \PYG{n}{Dy}\PYG{o}{=}\PYG{n}{Differential}\PYG{p}{(}\PYG{n}{y}\PYG{p}{)}
+      \PYG{n}{ϕe} \PYG{o}{=} \PYG{n}{exp}\PYG{p}{(}\PYG{n}{y}\PYG{p}{)} \PYG{c}{\PYGZsh{} (}
+      \PYG{k}{return} \PYG{n}{first}\PYG{p}{(}\PYG{n}{substitute}\PYG{o}{.}\PYG{p}{(}\PYG{n}{expand\PYGZus{}derivatives}\PYG{p}{(}\PYG{n}{Dy}\PYG{p}{(}\PYG{n}{ϕe}\PYG{p}{)),(}\PYG{k+kt}{Dict}\PYG{p}{(}\PYG{n}{y} \PYG{o}{=\PYGZgt{}} \PYG{n}{ξ}\PYG{p}{),)))}
+  \PYG{k}{end}
+\end{Verbatim}

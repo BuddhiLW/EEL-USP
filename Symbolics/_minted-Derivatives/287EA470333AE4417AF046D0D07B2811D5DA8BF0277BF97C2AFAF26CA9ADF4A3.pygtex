@@ -1,0 +1,3 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{latexify}\PYG{p}{(}\PYG{n}{last}\PYG{p}{(}\PYG{n}{derivative\PYGZus{}symb}\PYG{p}{(}\PYG{n}{f}\PYG{p}{)))}
+\end{Verbatim}
