@@ -1,6 +1,6 @@
 #+LATEX_COMPILER: xelatex
-
-#+STARTUP: latexpreview
+#+startup: latexpreview
+#+startup: imagepreview
 
 #+LATEX_HEADER: \hypersetup{colorlinks, allcolors=., colorlinks=true,linkcolor={blue!78!white}, urlcolor={purple}, filecolor={winered}}
 
@@ -8,6 +8,9 @@
 #+LATEX_HEADER:\definecolor{LightGray}{gray}{0.2}
 #+LATEX_HEADER:\usepackage{minted}
 #+LATEX_HEADER:\usemintedstyle{monokai}
+#+LATEX_HEADER:\usepackage{fontspec}
+#+LATEX_HEADER:\setmonofont{TeX Gyre Cursor}
+
 
 * Setup
 #+begin_src julia :session main :result :export both :tangle Derivatives.jl :eval no

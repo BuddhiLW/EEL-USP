@@ -100,6 +100,19 @@
      #+RESULTS: de71d98d-2ea1-4de4-a6b8-ce7638a1f5c9
      : mass_spring (generic function with 1 method)
 
+    #+begin_src julia :session main :result output
+      function mass_spring2(dy,y, p, t)
+          k, l, m, g = p
+          dy[2] = -(g/l)*sin(y[1]) - (k/m)*y[2]
+          dy[1] = y[2]
+          y[3] = m*g*cos(y[1]) + m*l*(y[2])^2
+      end
+    #+end_src
+
+    #+RESULTS:
+    : mass_spring2
+ 
+
      
 *** Initial conditions' code
     #+NAME: 51b07536-a42f-4890-871a-8a6a0c2c01c0
@@ -121,7 +134,7 @@
 
     #+NAME: 700db531-5f60-4ecf-aff6-8073f0011311
     #+begin_src ein-julia :session localhost :results output :tangle mass-spring.jl
-      prob = ODEProblem(mass_spring, u0, tspan, p)
+      prob = ODEProblem(mass_spring2, u0, tspan, p)
       sol = solve(prob,Tsit5(),reltol=1e-8,abstol=1e-8)
     #+end_src
 
@@ -228,51 +241,6 @@
       fig.canvas.draw() # Update the figure
       suptitle("2x2 Subplot")
     #+end_src
-
-    #+RESULTS: ecc8ee88-8352-43b1-b105-57ff4ece4829
-    :results:
-    PyError ($(Expr(:escape, :(ccall(#= /home/buddhilw/.julia/packages/PyCall/BD546/src/pyfncall.jl:43 =# @pysym(:PyObject_Call), PyPtr, (PyPtr, PyPtr, PyPtr), o, pyargsptr, kw))))) <class 'TypeError'>
-    TypeError('only size-1 arrays can be converted to Python scalars')
-      File "/home/buddhilw/.local/lib/python3.9/site-packages/matplotlib/pyplot.py", line 1272, in subplot
-	key = SubplotSpec._from_subplot_args(fig, args)
-      File "/home/buddhilw/.local/lib/python3.9/site-packages/matplotlib/gridspec.py", line 640, in _from_subplot_args
-	rows, cols = map(int, [rows, cols])
-
-
-    Stacktrace:
-      [1] pyerr_check
-	@ ~/.julia/packages/PyCall/BD546/src/exception.jl:62 [inlined]
-      [2] pyerr_check
-	@ ~/.julia/packages/PyCall/BD546/src/exception.jl:66 [inlined]
-      [3] _handle_error(msg::String)
-	@ PyCall ~/.julia/packages/PyCall/BD546/src/exception.jl:83
-      [4] macro expansion
-	@ ~/.julia/packages/PyCall/BD546/src/exception.jl:97 [inlined]
-      [5] #107
-	@ ~/.julia/packages/PyCall/BD546/src/pyfncall.jl:43 [inlined]
-      [6] disable_sigint
-	@ ./c.jl:458 [inlined]
-      [7] __pycall!
-	@ ~/.julia/packages/PyCall/BD546/src/pyfncall.jl:42 [inlined]
-      [8] _pycall!(ret::PyCall.PyObject, o::PyCall.PyObject, args::Tuple{Int64, Vector{Float64}, Vector{Float64}}, nargs::Int64, kw::Ptr{Nothing})
-	@ PyCall ~/.julia/packages/PyCall/BD546/src/pyfncall.jl:29
-      [9] _pycall!(ret::PyCall.PyObject, o::PyCall.PyObject, args::Tuple{Int64, Vector{Float64}, Vector{Float64}}, kwargs::Base.Iterators.Pairs{Union{}, Union{}, Tuple{}, NamedTuple{(), Tuple{}}})
-	@ PyCall ~/.julia/packages/PyCall/BD546/src/pyfncall.jl:11
-     [10] pycall(::PyCall.PyObject, ::Type{PyCall.PyAny}, ::Int64, ::Vararg{Any, N} where N; kwargs::Base.Iterators.Pairs{Union{}, Union{}, Tuple{}, NamedTuple{(), Tuple{}}})
-	@ PyCall ~/.julia/packages/PyCall/BD546/src/pyfncall.jl:83
-     [11] pycall(::PyCall.PyObject, ::Type{PyCall.PyAny}, ::Int64, ::Vararg{Any, N} where N)
-	@ PyCall ~/.julia/packages/PyCall/BD546/src/pyfncall.jl:83
-     [12] subplot(::Int64, ::Vararg{Any, N} where N; kws::Base.Iterators.Pairs{Union{}, Union{}, Tuple{}, NamedTuple{(), Tuple{}}})
-	@ PyPlot ~/.julia/packages/PyPlot/XHEG0/src/PyPlot.jl:177
-     [13] subplot(::Int64, ::Vararg{Any, N} where N)
-	@ PyPlot ~/.julia/packages/PyPlot/XHEG0/src/PyPlot.jl:174
-     [14] top-level scope
-	@ In[48]:8
-     [15] eval
-	@ ./boot.jl:360 [inlined]
-     [16] include_string(mapexpr::typeof(REPL.softscope), mod::Module, code::String, filename::String)
-	@ Base ./loading.jl:1116
-    :end:
 
     #+NAME: 79f5864d-6db6-4c7f-b4de-be34acb58a41
     #+begin_src ein-julia :session localhost :results output

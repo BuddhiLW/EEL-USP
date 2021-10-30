@@ -1,23 +1,11 @@
 % Created 2021-10-30 Sat 14:35
 % Intended LaTeX compiler: xelatex
 \documentclass[12pt]{article}
-\usepackage{graphicx}
-\usepackage{grffile}
-\usepackage{longtable}
-\usepackage{wrapfig}
-\usepackage{rotating}
-\usepackage[normalem]{ulem}
-% \usepackage[utf8]{inputenc}
-\usepackage[mathletters]{ucs}
 \usepackage{amsmath}
-\usepackage{textcomp}
 \usepackage{amssymb}
 \usepackage{capt-of}
-\usepackage{eurosym}
-\usepackage[T1]{fontenc}
-% \usepackage{Alegreya} %% Option 'black' gives heavier bold face 
-% \renewcommand*\oldstylenums[1]{{\AlegreyaOsF #1}}
-% \setmonofont{} %CMU Typewriter Text
+\usepackage{fontspec}
+\setmonofont{TeX Gyre Cursor}
 
 \usepackage{hyperref}
 \hypersetup{colorlinks, allcolors=., colorlinks=true,linkcolor={blue!78!white}, urlcolor={purple}, filecolor={winered}}
@@ -37,6 +25,7 @@
 \begin{document}
 
 \tableofcontents
+\clearpage
 
 \section{Setup}
 \label{sec:orgddbcd56}
@@ -170,9 +159,9 @@ Avaliano \(g(1.3)\), temos:
 g(1.3)
 \end{minted}
 
-\item Obtendo uma expressão em \LaTeX de \(g\)
+\item Obtendo uma expressão, em \LaTeX{}, de \(g\)
 \label{sec:org847f6ab}
-Existe um pacote me \texttt{Julia} chamado \texttt{Latexify.jl}. Podemos utilizá-lo
+Existe um pacote em \texttt{Julia} chamado \texttt{Latexify.jl}. Podemos utilizá-lo
 para renderizar o segundo termo retornado de \texttt{derivative\_symb}.
 
 \begin{minted}[frame=lines,fontsize=\scriptsize,linenos=false, bgcolor=LightGray]{julia}
