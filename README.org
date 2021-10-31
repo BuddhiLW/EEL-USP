@@ -1,4 +1,6 @@
 #+STARTUP: showall
+#+startup: latexpreview
+#+startup: imagepreview
 
 * Repositório de Notas e Computações
 ** Notas gerais
@@ -16,16 +18,18 @@ rodapé explicando detalhes da sintaxe ou do funcionamento do programa.
 
 ** Lista de computações
 *** Simulação de Discretização de Funções (f: ℝ → ℝ) [jl]
+*Documentação:*
 - [[file:Discretize.org][ Partition or Discretize f(x)=sin(2π.x)]]
      
 #+ATTR_HTML: :witdh 300px
 [[file:figs/curve3.png]]
 *** ODE: Massa-Mola [jl]
+*Documentação:*
    - [[file:ODEs/chapter1/notes.org][Solution in Julia]]
     #+ATTR_HTML: :width 500px
     [[file:ODEs/chapter1/output_Plots.png][file:./ODEs/chapter1/output_Plots.png]]
 *** Derivadas
-Documentação:
+*Documentação:*
 - [[file:Symbolics/Derivatives.pdf][pdf]]
 - [[file:Symbolics/Derivatives.org][org-mode]]
 
@@ -47,6 +51,14 @@ Obtemos ambos o resultado simbólico, como avaliamos a derivada no ponto $x=1.3$
 **** Simbólica
 #+ATTR_HTML: :width 500px
 [[file:Symbolics/figs/pic-selected-211030-1513-20.png][file:./Symbolics/figs/pic-selected-211030-1513-20.png]]
+*** PCA
+*Documentação:*
+- [[file:Statistics/PCA.org][PCA org-mode]]
+- [[file:Statistics/PCA.pdf][PCA pdf]]
+
+#+ATTR_HTML: :width 500px
+[[file:figs/PCA.png][file:./figs/PCA.png]]
+  
 * Sobre o repositório
 ** Repositório de Materiais Acadêmicos, EEL-USP.
 Autor(es)[09/01/2019]: Pedro Gomes Braquinho;

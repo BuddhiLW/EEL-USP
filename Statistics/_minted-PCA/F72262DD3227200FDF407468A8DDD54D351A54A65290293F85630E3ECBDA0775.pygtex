@@ -1,0 +1,9 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{using} \PYG{n}{Pkg}\PYG{p}{;}
+\PYG{n}{Pkg}\PYG{o}{.}\PYG{n}{activate}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}\PYGZti{}/PP/MonitoriaEstatistica/\PYGZdq{}}\PYG{p}{)}
+\PYG{n}{Pkg}\PYG{o}{.}\PYG{n}{add}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}PlotlyJS\PYGZdq{}}\PYG{p}{)}
+\PYG{n}{Pkg}\PYG{o}{.}\PYG{n}{add}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}CSV\PYGZdq{}}\PYG{p}{)}
+\PYG{n}{Pkg}\PYG{o}{.}\PYG{n}{add}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}DataFrames\PYGZdq{}}\PYG{p}{)}
+\PYG{n}{Pkg}\PYG{o}{.}\PYG{n}{add}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}MLJ\PYGZdq{}}\PYG{p}{)}
+\PYG{n}{Pkg}\PYG{o}{.}\PYG{n}{add}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}MLJMultivariateStatsInterface\PYGZdq{}}\PYG{p}{)}
+\end{Verbatim}

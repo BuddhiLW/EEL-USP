@@ -1,0 +1,6 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c}{\PYGZsh{} load and fit PCA}
+\PYG{n}{PCA} \PYG{o}{=} \PYG{n+nd}{@load} \PYG{n}{PCA} \PYG{n}{pkg}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}MultivariateStats\PYGZdq{}}
+\PYG{n}{mach} \PYG{o}{=} \PYG{n}{machine}\PYG{p}{(}\PYG{n}{PCA}\PYG{p}{(}\PYG{n}{pratio}\PYG{o}{=}\PYG{l+m+mi}{1}\PYG{p}{),} \PYG{n}{df}\PYG{p}{[}\PYG{o}{!}\PYG{p}{,} \PYG{n}{features}\PYG{p}{])}
+\PYG{n}{fit!}\PYG{p}{(}\PYG{n}{mach}\PYG{p}{)}
+\end{Verbatim}

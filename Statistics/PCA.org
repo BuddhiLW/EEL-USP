@@ -1,0 +1,100 @@
+#+LATEX_COMPILER: xelatex
+#+startup: latexpreview
+#+startup: imagepreview
+
+#+LATEX_HEADER: \hypersetup{colorlinks, allcolors=., colorlinks=true,linkcolor={blue!78!white}, urlcolor={purple}, filecolor={winered}}
+
+#+LATEX_HEADER:\usepackage{xcolor} % to access the named colour LightGray
+#+LATEX_HEADER:\definecolor{LightGray}{gray}{0.2}
+#+LATEX_HEADER:\usepackage{minted}
+#+LATEX_HEADER:\usemintedstyle{monokai}
+#+LATEX_HEADER:\usepackage{fontspec}
+#+LATEX_HEADER:\setmonofont{TeX Gyre Cursor}
+
+
+* Setup
+#+begin_src julia :session main :result output :export both :eval no
+  using Pkg;
+  Pkg.activate("~/PP/MonitoriaEstatistica/")
+  Pkg.add("PlotlyJS")
+  Pkg.add("CSV")
+  Pkg.add("DataFrames")
+  Pkg.add("MLJ")
+  Pkg.add("MLJMultivariateStatsInterface")
+#+end_src
+
+#+RESULTS:
+
+
+* PCA
+
+#+begin_src julia :session main :result output :export both :eval no
+  using PlotlyJS, CSV, DataFrames, MLJ
+#+end_src
+
+#+RESULTS:
+
+(Faça o download do [[https://r-data.pmagunia.com/dataset/r-dataset-package-plm-cigar][conjunto]])
+#+begin_src julia :session main :result output :export both :eval no
+ df = DataFrame(CSV.File("../data/csv/cigarro.csv"))
+#+end_src
+
+#+RESULTS:
+
+# [:sepal_width, :sepal_length, :petal_width, :petal_length]
+#+begin_src julia :session main :result output :export both :eval no
+  features = names(df)
+#+end_src
+
+#+RESULTS:
+: ["state", "year", "price", "pop", "pop16", "cpi", "ndi", "sales", "pimin"]
+
+#+begin_src julia :session main :result output :export both :eval no
+  # load and fit PCA
+  PCA = @load PCA pkg="MultivariateStats"
+  mach = machine(PCA(pratio=1), df[!, features])
+  fit!(mach)
+#+end_src
+
+#+RESULTS:
+
+#+begin_src julia :session main :result output :export both :eval no
+mach.report
+#+end_src
+
+#+RESULTS:
+: (indim = 9, outdim = 9, tprincipalvar = 5.912868580447365e7, tresidualvar = 0.0, tvar = 5.912868580447365e7, mean = [26.82608695652174, 77.5, 68.69992753623197, 4537.113188405797, 3366.616086956522, 73.59666666666685, 7525.023021798268, 123.95086956521729, 62.89927536231881], principalvars = [3.810371638857024e7, 2.099673758606224e7, 26650.17409200842, 989.7349267464283, 293.28947847307154, 204.1473360991825, 73.73770449187626, 18.146347999479847, 2.599955353150695])
+
+#+begin_src julia :session main :result output :export both :eval no
+  # compute explained variance for each dimension
+  explained_variance = report(mach).principalvars
+  explained_variance ./= sum(explained_variance)
+  explained_variance .*= 100
+
+  # transform data to get components
+  components = MLJ.transform(mach, df[!, features])
+  dimensions = Symbol.(names(components))
+  components.state = df.state
+
+  labels = attr(;
+                [
+                    dimensions[i] => "PC $i ($v%)"
+                    for (i, v) in enumerate(round.(explained_variance, digits=1))
+                        ]...
+                            )
+
+  # plot
+  plot(components, dimensions=dimensions, labels=labels, color=:state, kind="splom")
+#+end_src
+
+#+RESULTS:
+
+#+ATTR_HTML: :width 600px
+[[file:~/EEL-USP/figs/PCA.png][file:~/EEL-USP/figs/PCA.png]]
+
+🙏🙌 🤲 
+
+* Fontes:
+
+https://plotly.com/julia/pca-visualization/
+https://r-data.pmagunia.com/dataset/r-dataset-package-plm-cigar
